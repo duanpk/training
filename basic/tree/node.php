@@ -6,7 +6,7 @@ class Node
 {
     private $data, $left, $right;
 
-    public function __construct($data,$left = null, $right = null)
+    public function __construct($data, Node $left = null, Node $right = null)
     {
         $this->data = $data;
         $this->left = $left;

@@ -2,11 +2,10 @@
 
 namespace Basic\Tree;
 
-require_once 'queue.php';
-require_once '../node.php';
+use Basic\Queue\Queue;
 
-use Basic\Queue;
-
+require_once 'node.php';
+require_once __DIR__ . '/../queue/queue.php';
 
 class BinaryTree
 {
@@ -32,26 +31,40 @@ class BinaryTree
         return $this->root !== null;
     }
 
-    public function traverse($order = 'pre' | 'in' | 'post' | 'level')
+    /**
+     * traverse the tree
+     *
+     * @param   string $order  'pre' or 'post' or 'in' or 'level'
+     * @param   pre    method        pre-order
+     * @param   in     method        in-order
+     * @param   post   method        post-order
+     * @param   level  method        level-order
+     *
+     * @return  void         null
+     */
+    public function traverse($order = 'pre' | 'in' | 'post')
     {
         switch ($order) {
             case 'pre':
-                $this->preOrder($this->root);
+                $this->preOrder($this->getRoot());
                 break;
             case 'in':
-                $this->inOrder($this->root);
+                $this->inOrder($this->getRoot());
                 break;
             case 'post':
-                $this->postOrder($this->root);
-                break;
-            case 'level':
-                $this->levelOrder($this->root);
+                $this->postOrder($this->getRoot());
                 break;
         }
     }
 
-    // traverse the bt in pre-order
-    private function preOrder($node)
+    /**
+     * traverse the tree in pre-order
+     *
+     * @param   Node  $node  the root node
+     *
+     * @return  void         null
+     */
+    private function preOrder(Node $node = null)
     {
         if ($node !== null) {
             echo $node->getData() . ' ';
@@ -60,8 +73,14 @@ class BinaryTree
         }
     }
 
-    // traverse the bt in in-order
-    private function inOrder($node)
+    /**
+     * traverse the tree in in-order
+     *
+     * @param   Node  $node  the root node
+     *
+     * @return  void         null
+     */
+    private function inOrder(Node $node = null)
     {
         if ($node !== null) {
             $this->inOrder($node->getLeft());
@@ -70,8 +89,14 @@ class BinaryTree
         }
     }
 
-    // traverse the bt in post-order
-    private function postOrder($node)
+    /**
+     * traverse the tree in post-order
+     *
+     * @param   Node  $node  the root node
+     *
+     * @return  void         null
+     */
+    private function postOrder(Node $node = null)
     {
         if ($node !== null) {
             $this->postOrder($node->getLeft());
@@ -80,43 +105,34 @@ class BinaryTree
         }
     }
 
-    //traverse the bt in level-order
-    public function levelOrder()
+    public function insert($data)
     {
-        $queue = new Queue();
-        $queue->enqueue($this->root);
-        while (!$queue->isEmpty()) {
-            $node = $queue->dequeue();
-            echo $node->getData() . ' ';
-            if ($node->hasLeft()) {
-                $queue->enqueue($node->getLeft());
-            }
-            if ($node->hasRight()) {
-                $queue->enqueue($node->getRight());
-            }
-        }
+        $node = new Node($data);
+
+        $this->hasRoot()
+            ? $this->insertNode($this->getRoot(), $node)
+            : $this->setRoot($node);
     }
 
-    public function findMin()
+    private function insertNode(Node $node, Node $newNode)
     {
-        $current = $this->root;
-        while ($current->hasLeft()) {
-            $current = $current->getLeft();
-        }
-        return $current->getData();
-    }
+        $queue = new Queue([$node]);
+        while (true) {
+            $current = $queue->dequeue();
 
-    public function findMax()
-    {
-        $current = $this->root;
-        while ($current->hasRight()) {
-            $current = $current->getRight();
+            if ($current->hasLeft()) {
+                $queue->enqueue($current->getLeft());
+            } else {
+                $current->setLeft($newNode);
+                break;
+            }
+
+            if ($current->hasRight()) {
+                $queue->enqueue($current->getRight());
+            } else {
+                $current->setRight($newNode);
+                break;
+            }
         }
-        return $current->getData();
     }
 }
-
-$queue=new Queue();
-$queue->enqueue(1);
-$queue->enqueue(2);
-// $queue->
