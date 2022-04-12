@@ -5,10 +5,10 @@ namespace Basic\LinkedList;
 require_once '../../basic/linkedList/linkedList.php';
 
 $ll1 = new LinkedList();
-$ll1->addLast(12);
-$ll1->addLast(12);
-$ll1->addLast(12);
-$ll1->addLast(12);
+$ll1->addLast(1);
+$ll1->addLast(1);
+$ll1->addLast(1);
+$ll1->addLast(1);
 
 $ll2 = new LinkedList();
 $ll2->addLast(2);
@@ -27,7 +27,7 @@ while ($cur2 !== null) {
         $cur2 = $cur2->getNext();
         continue;
     }
-    if ($cur1?->getData() >= $cur2->getData()) {
+    if ($cur1->getData() >= $cur2->getData()) {
         if ($cur1->getPrev() === null) {
             $ll1->addFirst($cur2->getData());
             $cur2 = $cur2->getNext();
