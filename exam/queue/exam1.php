@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Queue;
+namespace Structure\Queue;
 
-require_once '../../basic/queue/queue.php';
+require_once '../../data-structure/queue/queue.php';
 
 
 $tasks = [2, 1, 3];

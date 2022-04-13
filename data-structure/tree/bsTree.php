@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\Tree;
+namespace Structure\Tree;
 
 require_once 'bTree.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\Stack;
+namespace Structure\Stack;
 
 class Stack
 {

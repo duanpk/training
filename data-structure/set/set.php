@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\Set;
+namespace Structure\Set;
 
 class Set
 {

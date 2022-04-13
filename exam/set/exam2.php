@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Set;
+namespace Structure\Set;
 
-require_once '../../basic/set/set.php';
+require_once '../../data-structure/set/set.php';
 
 $dictionary = new Set();
 $count = 0;

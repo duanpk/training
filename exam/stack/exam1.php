@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Stack;
+namespace Structure\Stack;
 
-require_once '../../basic/stack/stack.php';
+require_once '../../data-structure/stack/stack.php';
 
 $str = 'ab aa aa bcd ab';
 $stack = new Stack();

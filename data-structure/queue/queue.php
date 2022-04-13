@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\Queue;
+namespace Structure\Queue;
 
 class Queue
 {

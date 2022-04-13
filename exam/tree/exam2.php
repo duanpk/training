@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Tree;
+namespace Structure\Tree;
 
-require_once '../../basic/tree/bTree.php';
+require_once '../../data-structure/tree/bTree.php';
 
 // three leaves
 $left1 = new Node(4);

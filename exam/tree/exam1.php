@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Tree;
+namespace Structure\Tree;
 
-require_once '../../basic/tree/bsTree.php';
+require_once '../../data-structure/tree/bsTree.php';
 
 $bst = new BinarySearchTree();
 

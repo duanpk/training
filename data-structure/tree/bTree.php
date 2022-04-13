@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Tree;
+namespace Structure\Tree;
 
-use Basic\Queue\Queue;
+use Structure\Queue\Queue;
 
 require_once 'node.php';
 require_once __DIR__ . '/../queue/queue.php';

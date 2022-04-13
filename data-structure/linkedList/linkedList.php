@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\LinkedList;
+namespace Structure\LinkedList;
 
 require_once 'node.php';
 

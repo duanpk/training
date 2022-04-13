@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\LinkedList;
+namespace Structure\LinkedList;
 
-require_once '../../basic/linkedList/linkedList.php';
+require_once '../../data-structure/linkedList/linkedList.php';
 
 $ll1 = new LinkedList();
 $ll1->addLast(1);

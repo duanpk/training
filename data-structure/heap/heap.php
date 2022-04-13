@@ -1,6 +1,6 @@
 <?php
 
-namespace Basic\Heap;
+namespace Structure\Heap;
 
 function heapify(&$arr, $i, $size)
 {

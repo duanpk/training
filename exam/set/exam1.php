@@ -1,8 +1,8 @@
 <?php
 
-namespace Basic\Set;
+namespace Structure\Set;
 
-require_once '../../basic/set/set.php';
+require_once '../../data-structure/set/set.php';
 
 $arr = [1, 2, 3, 4, 5, 2, -1, 5, 2, 7, 11, 11, -5];
 
