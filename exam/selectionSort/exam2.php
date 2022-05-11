@@ -1,11 +1,8 @@
 <?php
 
-namespace Algorithms\SelectionSort;
+namespace Algorithms\Sort;
 
-use Algorithms\Sort\Selection;
-use Algorithms\Sort\Sort;
-
-require_once '../../algorithms/selectionSort/selection.php';
+require_once '../../algorithms/sort/selection/selection.php';
 
 $arr = [8, 22, 7, 9, 31, 5, 13];
 

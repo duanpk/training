@@ -33,7 +33,9 @@ abstract class Sort
         $arr[$j] = $tmp;
     }
 
-    abstract public static function sort($arr);
+    public static function sort($arr)
+    {
+    }
 
     public static function sortRecursive($arr, $start = 0, $end = null)
     {
