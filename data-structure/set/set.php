@@ -38,8 +38,6 @@ class Set
 
     public function print()
     {
-        foreach ($this->elements as $item) {
-            echo $item . ', ';
-        }
+        echo implode(', ', $this->elements);
     }
 }
