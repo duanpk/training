@@ -1,0 +1,124 @@
+:root {
+    --primary-color: rgb(0, 59, 116);
+    --secondary-color: rgb(165, 165, 165);
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+
+    background: rgb(238, 238, 238);
+}
+
+/* Add your css code here */
+table {
+    background: #fff;
+    padding: 1%;
+}
+
+td#header {
+    text-align: center;
+    text-transform: uppercase;
+
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+#header .title {
+    color: var(--primary-color);
+}
+
+#header .sub-title {
+    color: var(--secondary-color);
+}
+
+
+#main-content,
+#right-sidebar {
+    color: var(--secondary-color);
+    padding-top: 2%;
+}
+
+.blog {
+    margin-bottom: 2%;
+}
+
+.blog tr:first-child {
+    font-style: italic;
+}
+
+.blog-published-prefix {
+    font-weight: bold;
+}
+
+.blog-preview {
+    padding-left: 2%;
+}
+
+.blog-title {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.blog-btb-readmore {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2%;
+    text-transform: uppercase;
+}
+
+#pagination {
+    text-transform: uppercase;
+}
+
+.newer {
+    text-align: right;
+}
+
+.search-group{
+    display: flex;
+}
+
+.search-group input{
+    flex: 2;
+    padding: 3%;
+}
+
+.search-group button{
+    flex: 1;
+    margin-left: 1%;
+
+    background: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#right-sidebar h3{
+    text-transform: uppercase;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2%;
+}
+
+#right-sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#right-sidebar li{
+    padding: 2%;
+    font-weight: bold;
+}
+
+#right-sidebar li:not(:last-child){
+    border-bottom: 1px solid var(--secondary-color);
+}
