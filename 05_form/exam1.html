@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exam 1</title>
+    </head>
+    <body>
+        <form action="" autocomplete="off">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first_name">
+                    First name:<br />
+                    <input
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        placeholder="[Your_first_name]"
+                    />
+                </label>
+                <br />
+                <label for="last_name">
+                    Last name:<br />
+                    <input
+                        type="text"
+                        name="last_name"
+                        id="last_name"
+                        placeholder="[Your_last_name]"
+                    />
+                </label>
+                <br />
+            </fieldset>
+            <label for="job">
+                Job
+                <select name="job" id="job">
+                    <option value="Develop">Develop</option>
+                    <option value="Tester">Tester</option>
+                    <option value="PM">PM</option>
+                </select>
+            </label>
+            <br />
+            <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                placeholder="Your_hobbies"
+                required
+            ></textarea>
+            <br />
+            <button type="submit">Submit</button>
+            <button type="submit" formnovalidate>
+                Submit without validate
+            </button>
+            <button type="submit" formaction="/">Submit another target</button>
+            <button type="submit" formmethod="post">
+                Submit with post method
+            </button>
+            <button type="submit" formtarget="_blank">Submit in new tab</button>
+        </form>
+    </body>
+</html>
