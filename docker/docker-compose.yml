@@ -1,0 +1,29 @@
+version: '3'
+services:
+  run_express_server:
+    # build: .
+    image: image_dockerfile
+    command: node index.js
+    ports:
+      - "5001:5000"
+    container_name: express_server
+    working_dir: /home/app
+  # web:
+  #   # image: node:14-alpine3.11
+
+  #   # The container name
+  #   container_name: docker-compose-app
+
+  #   # Directory to work inside the container
+  #   working_dir: /home/app
+
+  #   # Command we run when start the container
+  #   command: yarn && yarn test
+
+  #   # Mapping of container port to host    
+  #   ports:
+  #     - "5001:5000"
+
+  #   # Mount volume 
+  #   volumes:
+  #     - ".:/home/app/"
